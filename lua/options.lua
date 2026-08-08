@@ -27,6 +27,8 @@ vim.opt.undofile = true
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.scrolloff = 8
 
+vim.opt.completeopt = "menuone,noselect,fuzzy,nosort"
+vim.opt.shortmess:append("c")
 vim.opt.signcolumn = "yes"
 vim.opt.termguicolors = true
 

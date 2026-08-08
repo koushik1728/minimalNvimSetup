@@ -9,6 +9,7 @@ vim.keymap.set({"n", "v"}, "<leader>d" ,[["_d]], { desc = "Delete without yankin
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<C-c>", ":nohl<CR>", { desc = "Clear search Highlighting"})
 
+vim.keymap.set("n", "<leader>cd", "<cmd>Ex<cr>", {desc="Open file explorer"})
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "moves lines down in visual selection"})
 
