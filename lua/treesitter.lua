@@ -3,12 +3,13 @@ local treesitter = require("nvim-treesitter")
 local ensure_installed = {
     "html","css","c","cpp","java","lua","vim","vimdoc","json","bash",
     --extras
+    "http","dockerfile"
 }
 
 treesitter.install(ensure_installed)
 
 vim.api.nvim_create_autocmd("FileType",{
-    pattern = *,
+    pattern = "*",
     callback = function(args)
         local buf = args.buf
         local ft = vim.bo[buf].filetype
