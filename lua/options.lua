@@ -1,6 +1,11 @@
-vim.g.netrw_banner = 0
+require "nvchad.options"
 
-vim.opt.nu = true
+-- add yours here!
+
+local o = vim.o
+ o.cursorlineopt ='both' -- to enable cursorline!
+
+ -- custom lines
 vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4
@@ -21,7 +26,7 @@ vim.opt.laststatus = 3
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = vim.fn.stdpath("data") .. "/undodir"
+vim.opt.undodir = vim.fn.stdpath("data") .. "/nvim/undodir"
 vim.opt.undofile = true
 
 vim.opt.clipboard:append("unnamedplus")
@@ -38,4 +43,3 @@ vim.api.nvim_create_autocmd("TextYankPost",{
             vim.hl.on_yank()
     end,
 })
-
